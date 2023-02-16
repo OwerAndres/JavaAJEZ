@@ -2,7 +2,7 @@
  * 
  */
 /**
- * @author USUARIO CCC
+ * @author guerr
  *
  */
 module Ajedrez {

@@ -6,9 +6,15 @@ package Ajedz;
  * @author Diego
  *
  */
-public class Caballos extends Fichas{
+public class Caballos implements Fichas{
 	
-	public Caballos(Tablero tablero) {
-		super(tablero);
+	public Caballos(Fichas Fichas) {
+		super();
+	}
+
+	@Override
+	public String getColor() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

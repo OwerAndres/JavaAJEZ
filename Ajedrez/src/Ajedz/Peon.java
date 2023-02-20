@@ -6,8 +6,14 @@ package Ajedz;
  * @author Diego
  *
  */
-public class Peon extends Fichas{
-	public Peon(Tablero tablero) {
-		super(tablero);
+public class Peon implements Fichas{
+	public Peon(Fichas Fichas) {
+		super();
+	}
+
+	@Override
+	public String getColor() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

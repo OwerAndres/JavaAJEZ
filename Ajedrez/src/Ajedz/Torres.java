@@ -6,9 +6,15 @@ package Ajedz;
  * @author Diego
  *
  */
-public class Torres extends Fichas{
+public class Torres implements Fichas{
 
-	public Torres(Tablero tablero) {
-		super(tablero);
+	public Torres(Fichas Fichas) {
+		super();
+	}
+
+	@Override
+	public String getColor() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

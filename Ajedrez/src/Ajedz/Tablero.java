@@ -7,6 +7,6 @@ package Ajedz;
  * @author Diego
  *
  */
-public interface Tablero {
+public class Tablero {
 	
 }

@@ -7,7 +7,7 @@ package Ajedz;
  * @author Diego
  *
  */
-public class Fichas {
+public interface Fichas {
 	
 	private Tablero tablero;
 	protected String color;

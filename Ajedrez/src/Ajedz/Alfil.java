@@ -6,9 +6,15 @@ package Ajedz;
  * @author Diego cambio prueba
  *
  */
-public class Alfil extends Fichas{
+public class Alfil implements Fichas{
 
-	public Alfil(Tablero tablero) {
-		super(tablero);
+	public Alfil(Fichas Fichas) {
+		super();
+	}
+
+	@Override
+	public String getColor() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

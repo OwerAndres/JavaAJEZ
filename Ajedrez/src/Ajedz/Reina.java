@@ -6,9 +6,15 @@ package Ajedz;
  * @author Diego
  *
  */
-public class Reina extends Fichas{
+public class Reina  implements Fichas{
 	
-	public Reina(Tablero tablero) {
-		super(tablero);
+	public Reina(Fichas Fichas) {
+		super();
+	}
+
+	@Override
+	public String getColor() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

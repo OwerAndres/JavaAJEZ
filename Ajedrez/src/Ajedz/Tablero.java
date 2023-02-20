@@ -6,7 +6,7 @@ package Ajedz;
  * 
  * @author Ower
  * @author Diego
- * jhhmnhmn7hy7m
+ * 
  *
  */
 public class Tablero {

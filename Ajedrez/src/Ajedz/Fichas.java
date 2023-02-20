@@ -9,20 +9,8 @@ package Ajedz;
  */
 public interface Fichas {
 	
-	private Tablero tablero;
-	protected String color;
+	String colorN ="negro";
+	String colorB ="blanco";
 
-	  public Fichas(Tablero tablero, String color) {
-	        this.tablero = tablero;
-	        this.color = color;
-	    }
-	  
-	  /**
-	   * devuelve el color de la ficha, que se almacena en la variable color
-	   * @return
-	   */
-	    public String getColor() {
-	        return color;
-	    }
 
 }

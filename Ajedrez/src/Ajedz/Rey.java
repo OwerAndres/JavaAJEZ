@@ -7,6 +7,7 @@ package Ajedz;
  *
  */
 public class Rey implements Fichas{
+<<<<<<< HEAD
 
 	public Rey(Fichas Fichas) {
 		super();
@@ -17,4 +18,8 @@ public class Rey implements Fichas{
 		// TODO Auto-generated method stub
 		return null;
 	}
+=======
+
+
+>>>>>>> main
 }

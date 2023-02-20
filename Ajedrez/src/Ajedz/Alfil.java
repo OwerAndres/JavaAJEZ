@@ -3,10 +3,11 @@ package Ajedz;
  * clase de la pieza alfil
  * 
  * @author Ower
- * @author Diego cambio prueba
+ * @author Diego
  *
  */
 public class Alfil implements Fichas{
+<<<<<<< HEAD
 
 	public Alfil(Fichas Fichas) {
 		super();
@@ -17,4 +18,8 @@ public class Alfil implements Fichas{
 		// TODO Auto-generated method stub
 		return null;
 	}
+=======
+
+
+>>>>>>> main
 }

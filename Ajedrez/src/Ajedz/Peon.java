@@ -7,6 +7,7 @@ package Ajedz;
  *
  */
 public class Peon implements Fichas{
+<<<<<<< HEAD
 	public Peon(Fichas Fichas) {
 		super();
 	}
@@ -16,4 +17,7 @@ public class Peon implements Fichas{
 		// TODO Auto-generated method stub
 		return null;
 	}
+=======
+
+>>>>>>> main
 }

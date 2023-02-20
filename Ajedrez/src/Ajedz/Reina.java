@@ -6,6 +6,7 @@ package Ajedz;
  * @author Diego
  *
  */
+<<<<<<< HEAD
 public class Reina  implements Fichas{
 	
 	public Reina(Fichas Fichas) {
@@ -17,4 +18,9 @@ public class Reina  implements Fichas{
 		// TODO Auto-generated method stub
 		return null;
 	}
+=======
+public class Reina implements Fichas{
+	
+
+>>>>>>> main
 }

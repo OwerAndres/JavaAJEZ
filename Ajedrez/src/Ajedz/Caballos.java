@@ -8,6 +8,7 @@ package Ajedz;
  */
 public class Caballos implements Fichas{
 	
+<<<<<<< HEAD
 	public Caballos(Fichas Fichas) {
 		super();
 	}
@@ -17,4 +18,7 @@ public class Caballos implements Fichas{
 		// TODO Auto-generated method stub
 		return null;
 	}
+=======
+
+>>>>>>> main
 }

@@ -3,7 +3,7 @@ package Ajedz;
  * clase de la pieza alfil
  * 
  * @author Ower
- * @author Diego
+ * @author Diego cambio prueba
  *
  */
 public class Alfil extends Fichas{

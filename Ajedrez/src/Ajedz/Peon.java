@@ -6,8 +6,6 @@ package Ajedz;
  * @author Diego
  *
  */
-public class Peon extends Fichas{
-	public Peon(Tablero tablero) {
-		super(tablero);
-	}
+public class Peon implements Fichas{
+
 }

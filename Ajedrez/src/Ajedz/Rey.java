@@ -6,9 +6,7 @@ package Ajedz;
  * @author Diego
  *
  */
-public class Rey extends Fichas{
+public class Rey implements Fichas{
 
-	public Rey(Tablero tablero) {
-		super(tablero);
-	}
+
 }

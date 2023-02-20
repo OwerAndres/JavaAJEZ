@@ -6,9 +6,7 @@ package Ajedz;
  * @author Diego
  *
  */
-public class Reina extends Fichas{
+public class Reina implements Fichas{
 	
-	public Reina(Tablero tablero) {
-		super(tablero);
-	}
+
 }

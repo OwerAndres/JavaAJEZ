@@ -8,9 +8,17 @@ package Ajedz;
  *
  */
 public interface Fichas {
-	
+	/**
+	 * Colores de las fichas
+	 */
 	String colorN ="negro";
 	String colorB ="blanco";
 
+	/**
+	 * Funciones de las fichas, las cuales serian 
+	 * sus movimientos y el comer a otras fichas
+	 */
+	void comer();
+	void movimientos();
 
 }

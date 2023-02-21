@@ -12,7 +12,8 @@ package Ajedz;
 public class Tablero {
 
 	/**
-	 * Variables del tamaño del tablero Variables para los colores del tablero
+	 * Variables del tamaño del tablero 
+	 * Variables para los colores del tablero
 	 */
 	static int Ancho = 8;
 	static int Largo = 8;
@@ -31,35 +32,48 @@ public class Tablero {
 		System.out.println();
 
 		/**
-		 * Dibuyjas las filas del tablero
+		 * Dibujas las filas del tablero
 		 */
-		for (int i = Largo; i >= 1; i--) {
+		String[][] matrizTablero = new String[Ancho][Largo];
 
-			System.out.printf("%d ", i);
+		for (int i = 0; i < Largo; i++) {
+			
+			/**
+			 * Dibuja los numeros de la columna izquierda del tablero
+			 */
+			System.out.printf("%d ", Largo - i);
+			
 			/**
 			 * dibuja las columnas del tablero
 			 */
-			for (int j = 1; j <= Ancho; j++) {
+			for (int j = 0; j < Ancho; j++) {
 				if ((i + j) % 2 == 0) {
-					System.out.print("[N]");
+					matrizTablero[i][j] = "[ ]";
 				} else {
-					System.out.print("[B]");
+					matrizTablero[i][j] = "[ ]";
 				}
-			}
+				System.out.print(matrizTablero[i][j]);
+			}		
 			/**
-			 * dibuja los numeros de la columa derecha del tablero
+			 * dibuja los numeros de la columna derecha del tablero
 			 */
-			System.out.printf(" %d", i);
+			System.out.printf(" %d", Largo - i);
 			System.out.println();
 		}
 
 		/**
-		 * Dibuja las letras de la ultima gila del tablero
+		 * Dibuja las letras de la ultima fila del tablero
 		 */
 		System.out.print("  ");
 		for (char letra = 'A'; letra <= 'H'; letra++) {
 			System.out.printf(" %c ", letra);
 		}
 		System.out.println();
+		
+		
+		
+		
 	}
+	
+	
 }

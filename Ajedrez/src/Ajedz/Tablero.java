@@ -12,8 +12,7 @@ package Ajedz;
 public class Tablero {
 
 	/**
-	 * Variables del tamaño del tablero 
-	 * Variables para los colores del tablero
+	 * Variables del tamaño del tablero Variables para los colores del tablero
 	 */
 	static int Ancho = 8;
 	static int Largo = 8;
@@ -21,6 +20,9 @@ public class Tablero {
 	String ColorBlanco = "Blanco";
 	String ColorNegro = "Negro";
 
+	/**
+	 * Dibuja el tablero
+	 */
 	public static void dibujar() {
 		/**
 		 * Dibuja la primera fila de las letras
@@ -37,12 +39,12 @@ public class Tablero {
 		String[][] matrizTablero = new String[Ancho][Largo];
 
 		for (int i = 0; i < Largo; i++) {
-			
+
 			/**
 			 * Dibuja los numeros de la columna izquierda del tablero
 			 */
 			System.out.printf("%d ", Largo - i);
-			
+
 			/**
 			 * dibuja las columnas del tablero
 			 */
@@ -53,7 +55,7 @@ public class Tablero {
 					matrizTablero[i][j] = "[ ]";
 				}
 				System.out.print(matrizTablero[i][j]);
-			}		
+			}
 			/**
 			 * dibuja los numeros de la columna derecha del tablero
 			 */
@@ -69,11 +71,51 @@ public class Tablero {
 			System.out.printf(" %c ", letra);
 		}
 		System.out.println();
-		
-		
-		
-		
+
 	}
-	
-	
+
+	/**
+	 * Mostrar el Peon Negro en el tablero, con el caracter "P"
+	 */
+	public static void peon() {
+		/**
+		 * Dibuja la primera fila de letras del tablero
+		 */
+		System.out.print("  ");
+		for (char letra = 'A'; letra <= 'H'; letra++) {
+			System.out.printf(" %c  ", letra);
+		}
+		System.out.println();
+
+		String[][] matrizTablero = new String[Ancho][Largo];
+		for (int i = 0; i < Largo; i++) {
+			System.out.printf("%d ", Largo - i);
+			for (int j = 0; j < Ancho; j++) {
+				if (i == 1 && j >= 0 && j <= 7) {
+					matrizTablero[i][j] = "[PN]";
+				} else if ((i + j) % 2 == 0) {
+					matrizTablero[i][j] = "[  ]";
+				} else {
+					matrizTablero[i][j] = "[  ]";
+				}
+				if (i == 6 && j >= 0 && j <= 7) {
+					matrizTablero[i][j] = "[PB]";
+				}
+				System.out.print(matrizTablero[i][j]);
+			}
+			System.out.printf(" %d", Largo - i);
+			System.out.println();
+		}
+		
+
+		/**
+		 * Dibuja la ultima fila de letras del tablero
+		 */
+		System.out.print("  ");
+		for (char letra = 'A'; letra <= 'H'; letra++) {
+			System.out.printf(" %c  ", letra);
+		}
+		System.out.println();
+	}
+
 }

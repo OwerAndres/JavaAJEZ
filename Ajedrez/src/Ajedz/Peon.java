@@ -28,7 +28,7 @@ public class Peon implements Fichas{
 	 */
 	public Peon(String color) {
 		this.color = color;
-		this.movimientoInicial = true;
+		this.movimientoInicial = false;
 		this.mover = false;
 	}
 	

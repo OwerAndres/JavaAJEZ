@@ -92,12 +92,19 @@ public class Tablero {
 			System.out.printf("%d ", Largo - i);
 			for (int j = 0; j < Ancho; j++) {
 				if (i == 1 && j >= 0 && j <= 7) {
+					/**
+					 * Dibuja los peones negros en la fila de la columna 7
+					 */
 					matrizTablero[i][j] = "[PN]";
 				} else if ((i + j) % 2 == 0) {
 					matrizTablero[i][j] = "[  ]";
 				} else {
 					matrizTablero[i][j] = "[  ]";
 				}
+				/**
+				 * Dibuja los Peones blancos en el tablero
+				 * en la fila de la columna 2 
+				 */
 				if (i == 6 && j >= 0 && j <= 7) {
 					matrizTablero[i][j] = "[PB]";
 				}

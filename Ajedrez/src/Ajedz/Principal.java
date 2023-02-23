@@ -9,16 +9,15 @@ package Ajedz;
 public class Principal {
 
 	public static void main(String[] args) {
-      Tablero.peon();
-     Tablero.dibujar();
+      Tablero tablero = new Tablero();
+      tablero.peonN();
+      tablero.peonB();
+      tablero.mostrarTablero();
+  
       
       
       
-      
-      
-      
-      
-      
+  
       
       
       

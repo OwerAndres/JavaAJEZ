@@ -32,6 +32,8 @@ public class Peon implements Fichas{
 		this.mover = false;
 	}
 	
+
+
 	/**
 	 * Get y Set
 	 */
@@ -73,8 +75,20 @@ public class Peon implements Fichas{
 
 	@Override
 	public void movimientos() {
-		// TODO Auto-generated method stub
+	    if (!movimientoInicial) {
+	        // Si el peón no ha hecho ningún movimiento, puede mover 1 o 2 casillas
+	        mover = true;
+	        movimientoInicial = true;
+	    } else {
+	        // Si el peón ya ha hecho al menos un movimiento, solo puede mover 1 casilla
+	        mover = true;
+	    }
 		
+	}
+
+	public boolean Moverse(String[][] matrizTablero, int filaInicial, int columnaInicial, int filaFinal,
+			int columnaFinal) {
+		return false;
 	}
 
 }

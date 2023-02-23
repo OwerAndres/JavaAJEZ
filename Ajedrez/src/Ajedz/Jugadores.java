@@ -12,12 +12,17 @@ public class Jugadores {
 	    private String jugador1;
 	    private String jugador2;
 	    
+	    // colores 
+	    private String colornegro;
+	    private String colorblanco;
+	    
 	    public Jugadores(String jugador1, String jugador2, Tablero tablero) {
 	        this.jugador1 = jugador1;
 	        this.jugador2 = jugador2;
 	        this.tablero = tablero;
 	    }
 	    
+	   
 	    public Tablero getTablero() {
 	        return tablero;
 	    }

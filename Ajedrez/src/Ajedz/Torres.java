@@ -8,17 +8,6 @@ package Ajedz;
  */
 public class Torres implements Fichas{
 
-	public Torres(Fichas Fichas) {
-		super();
-	}
-
-	@Override
-	public String getColor() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-
 	@Override
 	public void comer() {
 		// TODO Auto-generated method stub

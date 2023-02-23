@@ -8,21 +8,17 @@ package Ajedz;
  *
  */
 public interface Fichas {
-	
-	private Tablero tablero;
-	private String color;
+	/**
+	 * Colores de las fichas
+	 */
+	String colorN ="negro";
+	String colorB ="blanco";
 
-	  public Fichas(Tablero tablero, String color) {
-	        this.tablero = tablero;
-	        this.color = color;
-	    }
-	  
-	  /**
-	   * devuelve el color de la ficha, que se almacena en la variable color
-	   * @return
-	   */
-	    public String getColor() {
-	        return color;
-	    }
+	/**
+	 * Funciones de las fichas, las cuales serian 
+	 * sus movimientos y el comer a otras fichas
+	 */
+	void comer();
+	void movimientos();
 
 }

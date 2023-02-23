@@ -21,5 +21,4 @@ public class Alfil implements Fichas{
 	}
 
 
-
 }

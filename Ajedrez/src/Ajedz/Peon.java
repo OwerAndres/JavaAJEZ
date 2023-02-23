@@ -62,7 +62,9 @@ public class Peon implements Fichas{
 	 public boolean mover() {
 		 return this.mover;
 	 }
-
+	 
+	 
+	 
 	@Override
 	public void comer() {
 		// TODO Auto-generated method stub
@@ -74,8 +76,5 @@ public class Peon implements Fichas{
 		// TODO Auto-generated method stub
 		
 	}
-	 
-	 
-	 
 
 }

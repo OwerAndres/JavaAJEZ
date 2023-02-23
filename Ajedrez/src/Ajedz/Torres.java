@@ -7,7 +7,7 @@ package Ajedz;
  *
  */
 public class Torres implements Fichas{
-<<<<<<< HEAD
+
 
 	public Torres(Fichas Fichas) {
 		super();
@@ -18,7 +18,7 @@ public class Torres implements Fichas{
 		// TODO Auto-generated method stub
 		return null;
 	}
-=======
+
 
 	@Override
 	public void comer() {
@@ -33,5 +33,5 @@ public class Torres implements Fichas{
 	}
 
 
->>>>>>> main
+
 }

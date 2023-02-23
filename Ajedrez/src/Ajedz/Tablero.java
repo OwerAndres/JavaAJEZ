@@ -10,9 +10,6 @@ package Ajedz;
  *
  */
 public class Tablero {
-<<<<<<< HEAD
-	
-=======
 
 	/**
 	 * Variables del tamaño del tablero Variables para los colores del tablero
@@ -125,16 +122,12 @@ public class Tablero {
 	    }
 	    System.out.println();
 	}
+	
 
-<<<<<<< HEAD
-        // Dibuja la última fila con las letras
-        System.out.print("  ");
-        for (char letra = 'A'; letra <= 'H'; letra++) {
-            System.out.printf(" %c ", letra);
-        }
-        System.out.println();
-    }
->>>>>>> main
-=======
->>>>>>> origin/main
-}
+	/**
+	 * metodo mover
+	 */
+	
+	}
+
+

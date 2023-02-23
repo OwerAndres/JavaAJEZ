@@ -19,6 +19,7 @@ public class Caballos implements Fichas{
 		// TODO Auto-generated method stub
 		
 	}
+
 	
 
 }

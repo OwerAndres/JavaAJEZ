@@ -19,6 +19,9 @@ public class Reina implements Fichas{
 		// TODO Auto-generated method stub
 		
 	}
+
+
+	
 	
 
 }

@@ -7,18 +7,6 @@ package Ajedz;
  *
  */
 public class Alfil implements Fichas{
-<<<<<<< HEAD
-
-	public Alfil(Fichas Fichas) {
-		super();
-	}
-
-	@Override
-	public String getColor() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-=======
 
 	@Override
 	public void comer() {
@@ -33,5 +21,4 @@ public class Alfil implements Fichas{
 	}
 
 
->>>>>>> main
 }

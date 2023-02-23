@@ -7,11 +7,6 @@ package Ajedz;
  *
  */
 public class Peon implements Fichas{
-<<<<<<< HEAD
-<<<<<<< HEAD
-	public Peon(Fichas Fichas) {
-		super();
-=======
 	
 	/**
 	 * Atributos del Peon
@@ -80,15 +75,6 @@ public class Peon implements Fichas{
 	public void movimientos() {
 		// TODO Auto-generated method stub
 		
->>>>>>> origin/main
 	}
 
-	@Override
-	public String getColor() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-=======
-
->>>>>>> main
 }

@@ -12,6 +12,7 @@ import java.util.Scanner;
 public class Principal {
 
 	public static void main(String[] args) {
+<<<<<<< HEAD
       Tablero.dibujar();
       
       Scanner teclado = new Scanner (System.in);
@@ -23,6 +24,35 @@ public class Principal {
       jugado2=teclado.next();
    
 
+=======
+      Tablero.peon();
+     Tablero.dibujar();
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+>>>>>>> origin/main
 	}
 
 }

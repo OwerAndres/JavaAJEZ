@@ -7,6 +7,18 @@ package Ajedz;
  *
  */
 public class Caballos implements Fichas{
+
+	@Override
+	public void comer() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void movimientos() {
+		// TODO Auto-generated method stub
+		
+	}
 	
 <<<<<<< HEAD
 	public Caballos(Fichas Fichas) {

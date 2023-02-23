@@ -122,5 +122,12 @@ public class Tablero {
 	    }
 	    System.out.println();
 	}
+	
 
-}
+	/**
+	 * metodo mover
+	 */
+	
+	}
+
+

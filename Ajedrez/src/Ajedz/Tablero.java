@@ -92,6 +92,11 @@ public class Tablero {
 	}
 	
 	
+	
+	/**
+	 * Funcion para mover el peon en el tablero 
+	 */
+	
 	public void movPeonB() {
 	    Scanner reader = new Scanner(System.in);
 	    System.out.print("Ingrese la fila del peon que desea mover: ");
@@ -104,6 +109,7 @@ public class Tablero {
 	     */
 	    if (!matrizTablero[filaInicial][columnaInicial - 'A'].equals("[PB]")) {
 	        System.out.println("La posición inicial no hay un peón blanco");
+	        return;
 	    }
 
 	    System.out.print("Ingrese la fila donde movera el peon: ");
@@ -115,15 +121,37 @@ public class Tablero {
 	     * validador, si la posicion seleccionada es una casilla vacia o tiene un peon negro
 	     */
 	    if (matrizTablero[filaFinal][columnaFinal - 'A'].equals("[PN]") || !matrizTablero[filaFinal][columnaFinal - 'A'].equals("[  ]")) {
-	        System.out.println("La posición final ingresada no es una casilla vacía");
+	        System.out.println("La posicion final ingresada no es una casilla vacia");
+	        return;
 	    }
 
-	   /**
-	    * mover el peon a la posicion seleccionada
-	    */
-	    matrizTablero[filaInicial][columnaInicial - 'A'] = "[  ]";
-	    matrizTablero[filaFinal][columnaFinal - 'A'] = "[PB]";
+	    /**
+	     * verificar si el peon va realizar su primer movimiento 
+	     * podra mover 2 posiciones y despues solo podra mover 1 posicion
+	     */
+	    Peon peon = new Peon();
+	    if (peon.movimientoInicial()) {
+	        if (filaFinal == filaInicial - 1 || filaFinal == filaInicial - 2) {
+	            matrizTablero[filaInicial][columnaInicial - 'A'] = "[  ]";
+	            matrizTablero[filaFinal][columnaFinal - 'A'] = "[PB]";
+	            peon.setMovimientoInicial(true);
+	        } else {
+	            System.out.println("El peon solo puede moverse una o dos casillas");
+	        }
+	    } else {
+	        if (filaFinal == filaInicial - 1) {
+	            matrizTablero[filaInicial][columnaInicial - 'A'] = "[  ]";
+	            matrizTablero[filaFinal][columnaFinal - 'A'] = "[PB]";
+	        } else {
+	            System.out.println("El peon solo puede moverse una casilla hacia adelante");
+	        }
+	    }
 	}
+
+
+
+
+
 
 
 }

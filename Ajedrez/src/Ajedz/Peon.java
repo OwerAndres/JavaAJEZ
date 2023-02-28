@@ -76,19 +76,20 @@ public class Peon implements Fichas{
 	@Override
 	public void movimientos() {
 	    if (!movimientoInicial) {
-	        // Si el peón no ha hecho ningún movimiento, puede mover 1 o 2 casillas
+	        /**
+	         * si es el primer moviento del peon
+	         * podra mover 1 o 2 posiciones
+	         */
 	        mover = true;
 	        movimientoInicial = true;
 	    } else {
-	        // Si el peón ya ha hecho al menos un movimiento, solo puede mover 1 casilla
+	        /**
+	         * si el peon ya realizo su primer movimiento
+	         * el resto de sus movimiento solo podran ser de 1 posicion 
+	         */
 	        mover = true;
 	    }
 		
-	}
-
-	public boolean Moverse(String[][] matrizTablero, int filaInicial, int columnaInicial, int filaFinal,
-			int columnaFinal) {
-		return false;
 	}
 
 }

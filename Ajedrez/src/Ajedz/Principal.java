@@ -13,7 +13,9 @@ public class Principal {
       tablero.peonN();
       tablero.peonB();
       tablero.mostrarTablero();
-  
+      tablero.movPeonB();
+      tablero.mostrarTablero();
+     
       
       
       

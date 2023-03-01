@@ -19,7 +19,10 @@ public class Peon implements Fichas{
 	/**
 	 * Contructor
 	 */
-	public Peon() {}
+	public Peon() {
+		this.movimientoInicial = true;
+		this.mover = false;
+	}
 
 	/**
 	 * varibale de movimiento inicla que me indicara su peon realizo el primer moviento pasando a "True"
@@ -28,7 +31,7 @@ public class Peon implements Fichas{
 	 */
 	public Peon(String color) {
 		this.color = color;
-		this.movimientoInicial = false;
+		this.movimientoInicial = true;
 		this.mover = false;
 	}
 	
@@ -81,7 +84,7 @@ public class Peon implements Fichas{
 	         * podra mover 1 o 2 posiciones
 	         */
 	        mover = true;
-	        movimientoInicial = true;
+	        movimientoInicial = false;
 	    } else {
 	        /**
 	         * si el peon ya realizo su primer movimiento

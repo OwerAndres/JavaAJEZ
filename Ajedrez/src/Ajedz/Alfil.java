@@ -8,15 +8,46 @@ package Ajedz;
  */
 public class Alfil implements Fichas{
 
+	/**
+	 * Atributos del alfil
+	 */
+	private String color;
+	
+	/**
+	 * contructor
+	 */
+	
+	public Alfil() {}
+	
+	public Alfil(String color) {
+		this.color=color;
+	}
+	
+	/**
+	 * Get y Set
+	 */
+	 public String getColor(String color) {
+		 return this.color;
+	 }
+	 
+	 public void setColor(String color) {
+		 this.color = color;
+	 }
+	
+	 
+	 
+	 
 	@Override
 	public void comer() {
-		// TODO Auto-generated method stub
+		
+		
 		
 	}
 
 	@Override
 	public void movimientos() {
-		// TODO Auto-generated method stub
+		
+		
 		
 	}
 

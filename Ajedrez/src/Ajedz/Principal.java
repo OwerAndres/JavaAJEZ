@@ -1,4 +1,7 @@
 package Ajedz;
+
+import java.util.Scanner;
+
 /**
  * Clase principal donde se ejecutara todo el juego 
  * 
@@ -12,13 +15,22 @@ public class Principal {
       Tablero tablero = new Tablero();
       tablero.peonN();
       tablero.peonB();
+      tablero.alfilN();
+      tablero.alfilB();
       tablero.mostrarTablero();
-     // tablero.movPeonB();
-      tablero.movPeonN();
-      tablero.mostrarTablero();
-     
       
+   Scanner reader = new Scanner(System.in);
+   int num = 0;
+    
       
+      do {
+    	     tablero.movPeonB();
+    	      tablero.mostrarTablero();
+    	      tablero.movPeonN();
+    	      tablero.mostrarTablero();
+    	      System.out.println("seguir");
+    	      num = reader.nextInt();
+      }while(num!=0);
       
   
       

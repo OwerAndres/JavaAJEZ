@@ -31,7 +31,7 @@ public class Tablero {
 			for (int j = 0; j < Ancho; j++) {
 				if (i == 1 && j >= 0 && j <= 7) {
 					/**
-					 * Dibuja los peones negros en la fila de la columna 7
+					 * Dibuja los peones negros en la fila de la columna 1
 					 */
 					matrizTablero[i][j] = "[PN]";
 				} else if ((i + j) % 2 == 0) {
@@ -52,7 +52,7 @@ public class Tablero {
 		for (int i = 0; i < Largo; i++) {
 			for (int j = 0; j < Ancho; j++) {
 				/**
-				 * Dibuja los Peones blancos en el tablero en la fila de la columna 2
+				 * Dibuja los Peones blancos en el tablero en la fila de la columna 6
 				 */
 				if (i == 6 && j >= 0 && j <= 8) {
 					matrizTablero[i][j] = "[PB]";
@@ -60,7 +60,22 @@ public class Tablero {
 			}
 		}
 	}
+	
+	/**
+	 * Mostrar los alfiles negros en tablero
+	 */
+	public void alfilN() {
+		matrizTablero[0][2] = "[AN]";
+		matrizTablero[0][5] = "[AN]";
+	}
 
+	/**
+	 * Mostrar los alfiles blancos en tablero
+	 */
+	public void alfilB() {
+		matrizTablero[7][2] = "[AB]";
+		matrizTablero[7][5] = "[AB]";
+	}
 	
 	
 	/**
@@ -97,11 +112,60 @@ public class Tablero {
 
 	
 	
+	
+	
+	
+	
+	
+	
+	/**
+	 * Funcion para mover el Alfil blanco
+	 */
+	public void movAlfilB() {
+		System.out.println("Blanco");
+		Scanner reader = new Scanner(System.in);
+		System.out.println("Ingresa la fila del alfil que movera: ");
+		int filaInicial=reader.nextInt();
+		System.out.println("Ingresa la columna del peon que movera: ");
+		char columnaInicial = reader.next().toUpperCase().charAt(0);
+		
+		
+		/**
+		 * validar si el alfil seleccionado es un falfil blanco
+		 */
+		if(matrizTablero[filaInicial][columnaInicial - 'A'].equals("[AB]")){
+			System.out.println("En la posicion inicial no hay un alfil blanco");
+			return;
+		}
+		
+		System.out.println("ingresa la fila donde movera el alfil");
+		int filaFinal = reader.nextInt();
+		System.out.println("Ingresa la columna donde movera el alfil");
+		char columnaFinal = reader.next().toUpperCase().charAt(0);
+		
+	
+		
+		
+		
+		
+		reader.close();	
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	/**
 	 * Funcion para mover el peon blanco en el tablero
 	 */
 
 	public void movPeonB() {
+		System.out.println("Peon Blanco");
 		Scanner reader = new Scanner(System.in);
 		System.out.print("Ingrese la fila del peon que desea mover: ");
 		int filaInicial = reader.nextInt();
@@ -122,8 +186,8 @@ public class Tablero {
 		char columnaFinal = reader.next().toUpperCase().charAt(0);
 
 		/**
-		 * validador, si la posicion seleccionada es una casilla vacia o tiene un peon
-		 * negro
+		 * validador, si la posicion seleccionada es una casilla vacia o tiene alguna ficha 
+		 * negra
 		 */
 		if (matrizTablero[filaFinal][columnaFinal - 'A'].equals("[PN]")
 				|| !matrizTablero[filaFinal][columnaFinal - 'A'].equals("[  ]")) {
@@ -153,6 +217,7 @@ public class Tablero {
 				System.out.println("El peon solo puede moverse una posicion hacia delante");
 			}
 		}
+		reader.close();
 	}
 	
 	
@@ -162,6 +227,7 @@ public class Tablero {
 	 */
 	
 	public void movPeonN() {
+		System.out.println("Peon Negro");
 		Scanner reader = new Scanner(System.in);
 		System.out.print("Ingrese la fila del peon que desea mover: ");
 		int filaInicial = reader.nextInt();
@@ -182,8 +248,8 @@ public class Tablero {
 		char columnaFinal = reader.next().toUpperCase().charAt(0);
 
 		/**
-		 * validador, si la posicion seleccionada es una casilla vacia o tiene un peon
-		 * blanco
+		 * validador, si la posicion seleccionada es una casilla vacia o tiene alguna ficha 
+		 * blanca
 		 */
 		if (matrizTablero[filaFinal][columnaFinal - 'A'].equals("[PB]")
 				|| !matrizTablero[filaFinal][columnaFinal - 'A'].equals("[  ]")) {
@@ -213,6 +279,17 @@ public class Tablero {
 				System.out.println("El peon solo puede moverse una posicion hacia delante");
 			}
 		}
+		reader.close();
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 }

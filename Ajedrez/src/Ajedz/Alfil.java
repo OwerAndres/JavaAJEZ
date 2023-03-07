@@ -12,6 +12,7 @@ public class Alfil implements Fichas{
 	 * Atributos del alfil
 	 */
 	private String color;
+	private boolean Mover;
 	
 	/**
 	 * contructor
@@ -34,7 +35,13 @@ public class Alfil implements Fichas{
 		 this.color = color;
 	 }
 	
+	 /**
+	  * Metodos
+	  */
 	 
+	 public boolean Mover() {
+		 return this.Mover;
+	 }
 	 
 	 
 	@Override

@@ -10,6 +10,11 @@ package Ajedz;
 public interface Fichas {
 
 	/**
+	 * Atributos
+	 */
+	String FichasN = "Negro";
+	String FichasB = "Blancas";
+	/**
 	 * Funciones de las fichas, las cuales serian 
 	 * sus movimientos y el comer a otras fichas
 	 */

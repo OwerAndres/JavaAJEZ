@@ -20,23 +20,31 @@ public class Principal {
       tablero.mostrarTablero();
       
    Scanner reader = new Scanner(System.in);
-   int num = 0;
+ 
+   String val = "Seguir";
     
       
       do {
+    	  /*
     	     tablero.movPeonB();
     	      tablero.mostrarTablero();
     	      tablero.movPeonN();
     	      tablero.mostrarTablero();
     	      System.out.println("seguir");
-    	      num = reader.nextInt();
-      }while(num!=0);
-      
+    	      
+    	     */
+    	  tablero.movAlfilB();
+    	  tablero.mostrarTablero();
+    	  System.out.println("seguir");
+    	  val = reader.next();
+      }while(val!="Seguir");
+     
   
       
       
       
       
+     
       
       
       

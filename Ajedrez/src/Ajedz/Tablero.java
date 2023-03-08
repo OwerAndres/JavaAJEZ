@@ -113,16 +113,9 @@ public class Tablero {
 	
 	
 	
-	
-	
-	
-	
-	
 	/**
 	 * Funcion para mover el Alfil blanco
 	 */
-	
-	
 	public void movAlfilB() {
 		System.out.println("Blanco");
 		Scanner reader = new Scanner(System.in);
@@ -135,7 +128,8 @@ public class Tablero {
 		/**
 		 * validar si el alfil seleccionado es un falfil blanco
 		 */
-		if(matrizTablero[filaInicial][columnaInicial - 'A'].equals("[AB]")){
+		
+		if(!matrizTablero[filaInicial][columnaInicial - 'A'].equals("[AB]")){
 			System.out.println("En la posicion inicial no hay un alfil blanco");
 			return;
 		}
@@ -159,18 +153,10 @@ public class Tablero {
 		 */
 		Alfil alfilB = new Alfil();
 		
-		if (alfilB.Mover()) {
-			if (filaFinal == filaInicial || filaFinal == filaInicial) {
-				matrizTablero[filaInicial][columnaInicial - 'A'] = "[  ]";
-				matrizTablero[filaFinal][columnaFinal - 'A'] = "[AB]";
-				}
-			}
 		
 		
 		reader.close();	
 	}
-	
-	
 	
 	
 	
@@ -220,11 +206,10 @@ public class Tablero {
 		 * despues solo podra mover 1 posicion
 		 */
 		Peon peon = new Peon();
-		if (peon.movimientoInicial()) {
+		if (peon.movimientos()) {
 			if (filaFinal == filaInicial - 1 || filaFinal == filaInicial - 2) {
 				matrizTablero[filaInicial][columnaInicial - 'A'] = "[  ]";
 				matrizTablero[filaFinal][columnaFinal - 'A'] = "[PB]";
-				peon.setMovimientoInicial(true);
 			} else {
 				System.out.println("El peon solo puede moverse una o dos casillas");
 			}
@@ -281,11 +266,10 @@ public class Tablero {
 		 * despues solo podra mover 1 posicion
 		 */
 		Peon peon = new Peon();
-		if (peon.movimientoInicial()) {
+		if (peon.movimientos()) {
 			if (filaFinal == filaInicial + 1 || filaFinal == filaInicial + 2) {
 				matrizTablero[filaInicial][columnaInicial - 'A'] = "[  ]";
 				matrizTablero[filaFinal][columnaFinal - 'A'] = "[PN]";
-				peon.setMovimientoInicial(true);
 			} else {
 				System.out.println("El peon solo puede moverse una o dos casillas");
 			}

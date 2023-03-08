@@ -19,6 +19,6 @@ public interface Fichas {
 	 * sus movimientos y el comer a otras fichas
 	 */
 	void comer();
-	void movimientos();
+	boolean movimientos();
 
 }

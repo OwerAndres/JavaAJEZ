@@ -72,12 +72,12 @@ public class Peon implements Fichas{
 	 
 	@Override
 	public void comer() {
-		// TODO Auto-generated method stub
+		
 		
 	}
 
 	@Override
-	public void movimientos() {
+	public boolean movimientos() {
 	    if (!movimientoInicial) {
 	        /**
 	         * si es el primer moviento del peon
@@ -92,6 +92,7 @@ public class Peon implements Fichas{
 	         */
 	        mover = true;
 	    }
+		return mover;
 		
 	}
 

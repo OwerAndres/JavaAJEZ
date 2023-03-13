@@ -43,8 +43,6 @@ public class Tablero {
 		}
 	}
 
-	
-	
 	/**
 	 * Mostrar el Peon Blanco en el tablero, con el caracter "PB"
 	 */
@@ -60,7 +58,7 @@ public class Tablero {
 			}
 		}
 	}
-	
+
 	/**
 	 * Mostrar los alfiles negros en tablero
 	 */
@@ -76,8 +74,7 @@ public class Tablero {
 		matrizTablero[7][2] = "[AB]";
 		matrizTablero[7][5] = "[AB]";
 	}
-	
-	
+
 	/**
 	 * Mostrar el tablero completo con ambos tipos de peones
 	 */
@@ -110,53 +107,87 @@ public class Tablero {
 		System.out.println();
 	}
 
-	
-	
-	
 	/**
 	 * Funcion para mover el Alfil blanco
 	 */
-	public void movAlfilB() {
-		System.out.println("Blanco");
-		Scanner reader = new Scanner(System.in);
+	public void movAlfilB(Scanner reader) {
+		System.out.println("Alfil Blanco");
 		System.out.println("Ingresa la fila del alfil que movera: ");
-		int filaInicial=reader.nextInt();
+		int filaInicial = reader.nextInt();
 		System.out.println("Ingresa la columna del peon que movera: ");
 		char columnaInicial = reader.next().toUpperCase().charAt(0);
-		
-		
+
 		/**
 		 * validar si el alfil seleccionado es un falfil blanco
 		 */
-		
-		if(!matrizTablero[filaInicial][columnaInicial - 'A'].equals("[AB]")){
+
+		if (!matrizTablero[filaInicial][columnaInicial - 'A'].equals("[AB]")) {
 			System.out.println("En la posicion inicial no hay un alfil blanco");
-			return;
 		}
-		
+
 		System.out.println("ingresa la fila donde movera el alfil");
 		int filaFinal = reader.nextInt();
 		System.out.println("Ingresa la columna donde movera el alfil");
 		char columnaFinal = reader.next().toUpperCase().charAt(0);
-		
+
 		/**
 		 * validar si la posicion final es una casilla vacia o tiene alguna ficha negra
 		 */
-		if(matrizTablero[filaFinal][columnaFinal - 'A'].equals("[PN]")
+		if (matrizTablero[filaFinal][columnaFinal - 'A'].equals("[PN]")
 				|| !matrizTablero[filaFinal][columnaFinal - 'A'].equals("[  ]")) {
 			System.out.println("La posicion final ingresada no es una casilla vacia");
-			return;
 		}
-		
+
 		/**
 		 * Mover el alfil por el tablero
 		 */
 		Alfil alfilB = new Alfil();
-		
-		
-		
-		reader.close();	
-	}
+		    while (filaInicial != filaFinal || columnaInicial != columnaFinal) {
+		        // Movimiento Diagonal Arriba-Derecha
+		        if (filaInicial < filaFinal && columnaInicial < columnaFinal) {
+		            filaInicial++;
+		            columnaInicial++;
+		        }
+		        // Movimiento Diagonal Arriba-Izquierda
+		        else if (filaInicial < filaFinal && columnaInicial > columnaFinal) {
+		            filaInicial++;
+		            columnaInicial--;
+		        }
+		        // Movimiento Diagonal Abajo-Izquierda
+		        else if (filaInicial > filaFinal && columnaInicial > columnaFinal) {
+		            filaInicial--;
+		            columnaInicial--;
+		        }
+		        // Movimiento Diagonal Abajo-Derecha
+		        else if (filaInicial > filaFinal && columnaInicial < columnaFinal) {
+		            filaInicial--;
+		            columnaInicial++;
+		        }
+
+		        // Validar si la posicion actual contiene una ficha
+		        if (!matrizTablero[filaInicial][columnaInicial - 'A'].equals("[  ]")) {
+		            System.out.println("No puedes mover a la posicion seleccionada");
+		        }
+		    }
+
+		    // Actualizar el tablero
+		    matrizTablero[filaInicial][columnaInicial - 'A'] = "[  ]";
+		    matrizTablero[filaFinal][columnaFinal - 'A'] = "[AB]";
+		}
+	
+
+	
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
@@ -167,11 +198,11 @@ public class Tablero {
 	
 	/**
 	 * Funcion para mover el peon blanco en el tablero
+	 * 
 	 */
-	
-	public void movPeonB() {
+
+	public void movPeonB(Scanner reader) {
 		System.out.println("Peon Blanco");
-		Scanner reader = new Scanner(System.in);
 		System.out.print("Ingrese la fila del peon que desea mover: ");
 		int filaInicial = reader.nextInt();
 		System.out.print("Ingrese la columna del peon que desea mover: ");
@@ -182,7 +213,6 @@ public class Tablero {
 		 */
 		if (!matrizTablero[filaInicial][columnaInicial - 'A'].equals("[PB]")) {
 			System.out.println("La posición inicial no hay un peón blanco");
-			return;
 		}
 
 		System.out.print("Ingrese la fila donde movera el peon: ");
@@ -191,19 +221,17 @@ public class Tablero {
 		char columnaFinal = reader.next().toUpperCase().charAt(0);
 
 		/**
-		 * validador, si la posicion seleccionada es una casilla vacia o tiene alguna ficha 
-		 * negra
+		 * validador, si la posicion seleccionada es una casilla vacia o tiene alguna
+		 * ficha negra
 		 */
 		if (matrizTablero[filaFinal][columnaFinal - 'A'].equals("[PN]")
 				|| !matrizTablero[filaFinal][columnaFinal - 'A'].equals("[  ]")) {
 			System.out.println("La posicion final ingresada no es una casilla vacia");
-			return;
 		}
 
 		/**
-		 * verificar si el peon va realizar su primer movimiento, 
-		 * podra mover 2 posiciones
-		 * despues solo podra mover 1 posicion
+		 * verificar si el peon va realizar su primer movimiento, podra mover 2
+		 * posiciones despues solo podra mover 1 posicion
 		 */
 		Peon peon = new Peon();
 		if (peon.movimientos()) {
@@ -221,17 +249,13 @@ public class Tablero {
 				System.out.println("El peon solo puede moverse una posicion hacia delante");
 			}
 		}
-		reader.close();
 	}
-	
-	
-	
+
 	/**
 	 * Funcion para mover el peon negro en el tablero
 	 */
-	public void movPeonN() {
+	public void movPeonN(Scanner reader) {
 		System.out.println("Peon Negro");
-		Scanner reader = new Scanner(System.in);
 		System.out.print("Ingrese la fila del peon que desea mover: ");
 		int filaInicial = reader.nextInt();
 		System.out.print("Ingrese la columna del peon que desea mover: ");
@@ -242,7 +266,6 @@ public class Tablero {
 		 */
 		if (!matrizTablero[filaInicial][columnaInicial - 'A'].equals("[PN]")) {
 			System.out.println("La posición inicial no hay un peon negro");
-			return;
 		}
 
 		System.out.print("Ingrese la fila donde movera el peon: ");
@@ -251,19 +274,17 @@ public class Tablero {
 		char columnaFinal = reader.next().toUpperCase().charAt(0);
 
 		/**
-		 * validador, si la posicion seleccionada es una casilla vacia o tiene alguna ficha 
-		 * blanca
+		 * validador, si la posicion seleccionada es una casilla vacia o tiene alguna
+		 * ficha blanca
 		 */
 		if (matrizTablero[filaFinal][columnaFinal - 'A'].equals("[PB]")
 				|| !matrizTablero[filaFinal][columnaFinal - 'A'].equals("[  ]")) {
 			System.out.println("La posicion final ingresada no es una casilla vacia");
-			return;
 		}
 
 		/**
-		 * verificar si el peon va realizar su primer movimiento, 
-		 * podra mover 2 posiciones
-		 * despues solo podra mover 1 posicion
+		 * verificar si el peon va realizar su primer movimiento, podra mover 2
+		 * posiciones despues solo podra mover 1 posicion
 		 */
 		Peon peon = new Peon();
 		if (peon.movimientos()) {
@@ -281,17 +302,6 @@ public class Tablero {
 				System.out.println("El peon solo puede moverse una posicion hacia delante");
 			}
 		}
-		reader.close();
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 
 }

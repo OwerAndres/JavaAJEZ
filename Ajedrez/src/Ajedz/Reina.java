@@ -15,7 +15,8 @@ public class Reina implements Fichas{
 	}
 
 	@Override
-	public void movimientos() {
+	public boolean movimientos() {
+		return false;
 		// TODO Auto-generated method stub
 		
 	}

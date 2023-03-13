@@ -17,6 +17,8 @@ public class Principal {
 		tablero.peonB();
 		tablero.alfilN();
 		tablero.alfilB();
+		tablero.TorreB();
+		tablero.TorreN();
 		tablero.mostrarTablero();
 
 		Scanner reader = new Scanner(System.in);
@@ -24,14 +26,22 @@ public class Principal {
 		int val = 10;
 
 		do {
-			
-			tablero.movPeonB(reader);
-			tablero.mostrarTablero();
 			/*
+			
+			
 			tablero.movPeonN(reader);
 			tablero.mostrarTablero();
-			*/
 			tablero.movAlfilB(reader);
+			tablero.mostrarTablero();
+			*/
+			tablero.movPeonN(reader);
+			tablero.mostrarTablero();
+			tablero.movPeonB(reader);
+			tablero.mostrarTablero();
+			
+			tablero.movTorreN(reader);
+			tablero.mostrarTablero();
+			tablero.movTorreB(reader);
 			tablero.mostrarTablero();
 		} while (val != 10);
 		

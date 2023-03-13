@@ -74,6 +74,21 @@ public class Tablero {
 		matrizTablero[7][2] = "[AB]";
 		matrizTablero[7][5] = "[AB]";
 	}
+	
+	/**
+	 * Mostrar las torres negras
+	 */
+	public void TorreN() {
+		matrizTablero[0][0] = "[TN]";
+		matrizTablero[0][7] = "[TN]";
+	}
+	/**
+	 * Mostrar torres blancas 
+	 */
+	public void TorreB() {
+		matrizTablero[7][0] = "[TB]";
+		matrizTablero[7][7] = "[TB]";
+	}
 
 	/**
 	 * Mostrar el tablero completo con ambos tipos de peones
@@ -107,91 +122,6 @@ public class Tablero {
 		System.out.println();
 	}
 
-	/**
-	 * Funcion para mover el Alfil blanco
-	 */
-	public void movAlfilB(Scanner reader) {
-		System.out.println("Alfil Blanco");
-		System.out.println("Ingresa la fila del alfil que movera: ");
-		int filaInicial = reader.nextInt();
-		System.out.println("Ingresa la columna del peon que movera: ");
-		char columnaInicial = reader.next().toUpperCase().charAt(0);
-
-		/**
-		 * validar si el alfil seleccionado es un falfil blanco
-		 */
-
-		if (!matrizTablero[filaInicial][columnaInicial - 'A'].equals("[AB]")) {
-			System.out.println("En la posicion inicial no hay un alfil blanco");
-		}
-
-		System.out.println("ingresa la fila donde movera el alfil");
-		int filaFinal = reader.nextInt();
-		System.out.println("Ingresa la columna donde movera el alfil");
-		char columnaFinal = reader.next().toUpperCase().charAt(0);
-
-		/**
-		 * validar si la posicion final es una casilla vacia o tiene alguna ficha negra
-		 */
-		if (matrizTablero[filaFinal][columnaFinal - 'A'].equals("[PN]")
-				|| !matrizTablero[filaFinal][columnaFinal - 'A'].equals("[  ]")) {
-			System.out.println("La posicion final ingresada no es una casilla vacia");
-		}
-
-		/**
-		 * Mover el alfil por el tablero
-		 */
-		Alfil alfilB = new Alfil();
-		    while (filaInicial != filaFinal || columnaInicial != columnaFinal) {
-		        // Movimiento Diagonal Arriba-Derecha
-		        if (filaInicial < filaFinal && columnaInicial < columnaFinal) {
-		            filaInicial++;
-		            columnaInicial++;
-		        }
-		        // Movimiento Diagonal Arriba-Izquierda
-		        else if (filaInicial < filaFinal && columnaInicial > columnaFinal) {
-		            filaInicial++;
-		            columnaInicial--;
-		        }
-		        // Movimiento Diagonal Abajo-Izquierda
-		        else if (filaInicial > filaFinal && columnaInicial > columnaFinal) {
-		            filaInicial--;
-		            columnaInicial--;
-		        }
-		        // Movimiento Diagonal Abajo-Derecha
-		        else if (filaInicial > filaFinal && columnaInicial < columnaFinal) {
-		            filaInicial--;
-		            columnaInicial++;
-		        }
-
-		        // Validar si la posicion actual contiene una ficha
-		        if (!matrizTablero[filaInicial][columnaInicial - 'A'].equals("[  ]")) {
-		            System.out.println("No puedes mover a la posicion seleccionada");
-		        }
-		    }
-
-		    // Actualizar el tablero
-		    matrizTablero[filaInicial][columnaInicial - 'A'] = "[  ]";
-		    matrizTablero[filaFinal][columnaFinal - 'A'] = "[AB]";
-		}
-	
-
-	
-
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	
@@ -303,5 +233,247 @@ public class Tablero {
 			}
 		}
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	public void movTorreB (Scanner reader) {
+		/***
+		 *parte negra de la torre 
+		 */
+		System.out.println("Torre Blanca");
+		System.out.print("Ingrese la fila de la torre que desea mover: ");
+		int filaInicial = reader.nextInt();
+		System.out.print("Ingrese la columna de la torre que desea mover: ");
+		char columnaInicial = reader.next().toUpperCase().charAt(0);
+		
+		/**
+		 * validar si la poscion seleccionada es una torre
+		 */
+		if (!matrizTablero[filaInicial][columnaInicial - 'A'].equals("[TB]")) {
+			System.out.println("La posición inicial no hay una torre negra");
+			
+		}
+		
+		System.out.print("Ingrese la fila donde movera la torre: ");
+		int filaFinal = reader.nextInt();
+		System.out.print("Ingrese la columna donde movera la torre:  ");
+		char columnaFinal = reader.next().toUpperCase().charAt(0);
+		
+		/**
+		 * validador, si la posicion seleccionada es una casilla vacia o tiene alguna ficha 
+		 *
+		 */
+		System.out.println(filaFinal);
+		System.out.println(columnaFinal);
+		
+		if (matrizTablero[filaFinal][columnaFinal - 'A'].equals("[PN]")
+				|| !matrizTablero[filaFinal][columnaFinal - 'A'].equals("[  ]")) {
+			System.out.println("La posicion final ingresada no es una casilla vacia");
+			
+		}
+		
+		int num = 0;
+		
+		
+	    switch (columnaFinal) {
+	    
+	    case'A':
+	    	
+	        num=0;
+	    	
+	    	
+	    	break;
+	    	
+	    	
+	    	
+	    case'B':
+	    	num=1;
+	    	
+	    	break;
+	    case'C':
+	    	
+	    	num=2;
+	    	
+	    	break;
+	    	
+	    case'D':
+	    	num=3;
+	    	
+	    	break;
+	    case'E':
+	    	num=4;
+	    	
+	    	break;
+	    	
+	    	
+	    	
+	    case'F':
+	    	num=5;
+	    	
+	    	break;
+	    	
+	    case'G':
+	    	num=6;
+	    
+	    	break;
+	    case'H':
+	    	
+	    	num=7;
+	    	break;
+	    }
+	    System.out.println(num);
+	    int columnaNueva = num;
+ 
 
+
+		/**
+		 * Mover Torre delante
+		 */
+		if(filaInicial != filaFinal || columnaInicial == columnaNueva) {
+			matrizTablero[filaFinal][columnaNueva] = "[TB]";
+		    matrizTablero[filaInicial][columnaInicial- 'A'] = "[  ]";
+		    filaInicial = filaFinal;
+
+		}else {
+			
+		}
+		    
+		}
+
+		
+	
+
+	
+	
+	
+	
+	public void movTorreN(Scanner reader) {
+		/***
+		 *parte negra de la torre 
+		 */
+		System.out.println("Torre Negra");
+		System.out.print("Ingrese la fila de la torre que desea mover: ");
+		int filaInicial = reader.nextInt();
+		System.out.print("Ingrese la columna de la torre que desea mover: ");
+		char columnaInicial = reader.next().toUpperCase().charAt(0);
+		
+		/**
+		 * validar si la poscion seleccionada es una torre
+		 */
+		if (!matrizTablero[filaInicial][columnaInicial - 'A'].equals("[TN]")) {
+			System.out.println("La posición inicial no hay una torre negra");
+			
+		}
+		
+		System.out.print("Ingrese la fila donde movera la torre: ");
+		int filaFinal = reader.nextInt();
+		System.out.print("Ingrese la columna donde movera la torre:  ");
+		char columnaFinal = reader.next().toUpperCase().charAt(0);
+		
+		/**
+		 * validador, si la posicion seleccionada es una casilla vacia o tiene alguna ficha 
+		 *
+		 */
+		System.out.println(filaFinal);
+		System.out.println(columnaFinal);
+		
+		if (matrizTablero[filaFinal][columnaFinal - 'A'].equals("[PN]")
+				|| !matrizTablero[filaFinal][columnaFinal - 'A'].equals("[  ]")) {
+			System.out.println("La posicion final ingresada no es una casilla vacia");
+			
+		}
+		
+		int num = 0;
+		
+		
+	    switch (columnaFinal) {
+	    
+	    case'A':
+	    	
+	        num=0;
+	    	
+	    	
+	    	break;
+	    	
+	    	
+	    	
+	    case'B':
+	    	num=1;
+	    	
+	    	break;
+	    case'C':
+	    	
+	    	num=2;
+	    	
+	    	break;
+	    	
+	    case'D':
+	    	num=3;
+	    	
+	    	break;
+	    case'E':
+	    	num=4;
+	    	
+	    	break;
+	    	
+	    	
+	    	
+	    case'F':
+	    	num=5;
+	    	
+	    	break;
+	    	
+	    case'G':
+	    	num=6;
+	    
+	    	break;
+	    case'H':
+	    	
+	    	num=7;
+	    	break;
+	    }
+	    System.out.println(num);
+	    int columnaNueva = num;
+ 
+
+
+		/**
+		 * Mover Torre delante
+		 */
+		if(filaInicial != filaFinal || columnaInicial == columnaNueva) {
+			matrizTablero[filaFinal][columnaNueva] = "[TN]";
+		    matrizTablero[filaInicial][columnaInicial- 'A'] = "[  ]";
+		    filaInicial = filaFinal;
+
+		}else {
+			
+		}
+		   
+	}
+	
 }
+
+
+
+	
+	
+
+	
+
+

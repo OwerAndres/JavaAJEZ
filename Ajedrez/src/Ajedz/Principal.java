@@ -17,28 +17,35 @@ public class Principal {
       tablero.peonB();
       tablero.alfilN();
       tablero.alfilB();
+      tablero.torreB();
+      tablero.torreN();
       tablero.mostrarTablero();
       
    Scanner reader = new Scanner(System.in);
  
    String val = "Seguir";
+    tablero.movTorreN();
     
-      
+   String vol="seguir";
+   tablero.movTorreB();
+  /*    
       do {
-    	  /*
+    	  
     	     tablero.movPeonB();
     	      tablero.mostrarTablero();
     	      tablero.movPeonN();
     	      tablero.mostrarTablero();
     	      System.out.println("seguir");
     	      
-    	     */
+    	     
     	  tablero.movAlfilB();
     	  tablero.mostrarTablero();
     	  System.out.println("seguir");
     	  val = reader.next();
       }while(val!="Seguir");
-     
+   */
+   
+  
   
       
       

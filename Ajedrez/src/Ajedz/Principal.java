@@ -24,14 +24,18 @@ public class Principal {
 		int val = 10;
 
 		do {
-			
+			/*
 			tablero.movPeonB(reader);
 			tablero.mostrarTablero();
-			/*
-			tablero.movPeonN(reader);
+		
+
+			
+			tablero.movAlfilB(reader);
 			tablero.mostrarTablero();
 			*/
-			tablero.movAlfilB(reader);
+			tablero.movPeonN(reader);
+			tablero.mostrarTablero();
+			tablero.movAlfilN(reader);
 			tablero.mostrarTablero();
 		} while (val != 10);
 		

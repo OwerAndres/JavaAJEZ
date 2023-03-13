@@ -107,6 +107,8 @@ public class Tablero {
 		System.out.println();
 	}
 
+	
+	
 	/**
 	 * Funcion para mover el Alfil blanco
 	 */
@@ -138,64 +140,69 @@ public class Tablero {
 			System.out.println("La posicion final ingresada no es una casilla vacia");
 		}
 
+
 		/**
-		 * Mover el alfil por el tablero
-		 */
-		Alfil alfilB = new Alfil();
-		    while (filaInicial != filaFinal || columnaInicial != columnaFinal) {
-		        // Movimiento Diagonal Arriba-Derecha
-		        if (filaInicial < filaFinal && columnaInicial < columnaFinal) {
-		            filaInicial++;
-		            columnaInicial++;
-		        }
-		        // Movimiento Diagonal Arriba-Izquierda
-		        else if (filaInicial < filaFinal && columnaInicial > columnaFinal) {
-		            filaInicial++;
-		            columnaInicial--;
-		        }
-		        // Movimiento Diagonal Abajo-Izquierda
-		        else if (filaInicial > filaFinal && columnaInicial > columnaFinal) {
-		            filaInicial--;
-		            columnaInicial--;
-		        }
-		        // Movimiento Diagonal Abajo-Derecha
-		        else if (filaInicial > filaFinal && columnaInicial < columnaFinal) {
-		            filaInicial--;
-		            columnaInicial++;
-		        }
-
-		        // Validar si la posicion actual contiene una ficha
-		        if (!matrizTablero[filaInicial][columnaInicial - 'A'].equals("[  ]")) {
-		            System.out.println("No puedes mover a la posicion seleccionada");
-		        }
-		    }
-
-		    // Actualizar el tablero
-		    matrizTablero[filaInicial][columnaInicial - 'A'] = "[  ]";
-		    matrizTablero[filaFinal][columnaFinal - 'A'] = "[AB]";
+		Mover el alfil por el tablero
+		*/
+		if (filaInicial == filaFinal || columnaInicial == columnaFinal ||
+				Math.abs(filaInicial - filaFinal) != Math.abs(columnaInicial - columnaFinal)) {
+		System.out.println("El movimiento no es valido");
 		}
+		matrizTablero[filaInicial][columnaInicial - 'A'] = "[  ]";
+		matrizTablero[filaFinal][columnaFinal - 'A'] = "[AB]";
+		
+	}
 	
+	
+	
+	/**
+	 * Funcion para mover el Alfil Negro
+	 */
+	public void movAlfilN(Scanner reader) {
+		System.out.println("Alfil Blanco");
+		System.out.println("Ingresa la fila del alfil que movera: ");
+		int filaInicial = reader.nextInt();
+		System.out.println("Ingresa la columna del peon que movera: ");
+		char columnaInicial = reader.next().toUpperCase().charAt(0);
+
+		/**
+		 * validar si el alfil seleccionado es un falfil negro
+		 */
+
+		if (!matrizTablero[filaInicial][columnaInicial - 'A'].equals("[AN]")) {
+			System.out.println("En la posicion inicial no hay un alfil blanco");
+		}
+
+		System.out.println("ingresa la fila donde movera el alfil");
+		int filaFinal = reader.nextInt();
+		System.out.println("Ingresa la columna donde movera el alfil");
+		char columnaFinal = reader.next().toUpperCase().charAt(0);
+
+		/**
+		 * validar si la posicion final es una casilla vacia o tiene alguna ficha negra
+		 */
+		if (matrizTablero[filaFinal][columnaFinal - 'A'].equals("[PN]")
+				|| !matrizTablero[filaFinal][columnaFinal - 'A'].equals("[  ]")) {
+			System.out.println("La posicion final ingresada no es una casilla vacia");
+		}
+
+
+		/**
+		Mover el alfil por el tablero
+		*/
+		if (filaInicial == filaFinal || columnaInicial == columnaFinal ||
+				Math.abs(filaInicial - filaFinal) != Math.abs(columnaInicial - columnaFinal)) {
+		System.out.println("El movimiento no es valido");
+		}
+		matrizTablero[filaInicial][columnaInicial - 'A'] = "[  ]";
+		matrizTablero[filaFinal][columnaFinal - 'A'] = "[AN]";
+		
+	}
+
 
 	
+	
 
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	/**
 	 * Funcion para mover el peon blanco en el tablero
 	 * 
